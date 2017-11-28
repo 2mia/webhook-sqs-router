@@ -1,5 +1,5 @@
 WebhookSqsRouter::Application.routes.draw do
   root 'application#index'
 
-  match "*path", via: [:get, :post], to: "application#queue", as: 'queue'
+  match "/", via: [:post], to: "application#queue"
 end

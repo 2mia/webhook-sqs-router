@@ -1,11 +1,11 @@
-ruby "2.0.0"
-source 'https://rubygems.org'
+source "https://rubygems.org"
+ruby "2.2.8"
 
-# Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.3'
 gem 'rails-api'
-gem 'aws-sdk'
+gem 'aws-sdk-v1'
 gem 'unicorn'
+#gem 'json', '1.8.3'
 
 group :development, :test do
   gem 'rspec-rails'

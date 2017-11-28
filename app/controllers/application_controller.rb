@@ -4,7 +4,7 @@ class ApplicationController < ActionController::API
   end
 
   def queue
-    SQS.enqueue({request: {host: request.host, method: request.method, path: params[:path], ts: Time.now.to_s}, params: params})
+    SQS.enqueue(JSON.parse(request.raw_post))
     render json: {ok: true}
   end
 end
